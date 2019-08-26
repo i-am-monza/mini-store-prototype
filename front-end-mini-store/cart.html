@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Russ - Mini Store</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Primary styles to be accessed by the html page-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	<!--Secondary styles to be accessed by the html page-->
+	<link rel="stylesheet" type="text/css" href="styles/cart.css">
+
+	<!--Second link to a different external javascript file-->
+	<script type="text/javascript" defer src="scripts/storeEffects.js"></script>
+
+	<!--Link to the external javascript file-->
+	<script type="text/javascript" defer src="scripts/cart.js"></script>
+
+	<!--Second link to a different external javascript file-->
+	<script type="text/javascript" defer src="scripts/ministore.js"></script>
+
+	<!--Create a link to the jQuery library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<!--Have the onload event to display products added to cart from previcioud-->
+<body>
+	<!--Bootstrap custom styled navigation bar-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  		<a class="navbar-brand" href="#">DIEMON Studios.</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		  <ul class="navbar-nav mr-auto">
+  		    <li class="nav-item">
+  		      <a class="nav-link" href="home.html">Home</a>
+  		    </li>
+  		    <li class="nav-item">
+  		      <a class="nav-link" href="catalogue.html">Catalogue</a>
+  		    </li>
+  		    <li class="nav-item active">
+  		      <a class="nav-link" href="cart.html">Cart <span class="sr-only">(current)</span></a>
+  		    </li>
+  		  </ul>
+  		</div>
+	</nav>
+	<header>
+		<div class="container">		<!--Create a bootstrap container for placing the pages biggest header-->
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Checking Out</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<section class="container">
+		<div class="row">
+		<!--Create a 6-grid in this container for listing the products with images-->
+			<div class="col-sm-6">
+				<div id="productsHeader">
+					<h3 style="text-align: center; font-style: italic;">Products</h3>
+				</div>
+				<!--Display the important products and their associated buttons on the store in div element-->
+				<div id="productsList">
+					<article>
+						<div>
+							<img id="how_to_rob" src="images/how_to_rob.jpg" alt="How To Rob" class="rounded">
+							<br>
+							<button class="btn-success" value="101" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>How To Rob</b>: R 120.00</label>
+						</div>
+						<div>
+							<img src="images/zoo.jpg" alt="ZOO" class="rounded">
+							<br>
+							<button class="btn-success" value="102" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>ZOO</b>: R 133.49</label>
+						</div>
+						<div>
+							<img src="images/silence.jpg" alt="Silence" class="rounded">
+							<br>
+							<button class="btn-success" value="103" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>Silence</b>: R 99.99</label>
+						</div>
+					</article>
+					<article>
+						<div>
+							<img src="images/color_blind.jpg" alt="Color Blind" class="rounded">
+							<br>
+							<button class="btn-success" value="104" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>Color Blind</b>: R 77.24</label>
+							<div class="popup">
+								<span class="popuptext" id="myPopup"></span>
+							</div>
+						</div>
+						<div>
+							<img src="images/straight_from_limbo.jpg" alt="Straight From Limbo" class="rounded">
+							<br>
+							<button class="btn-success" value="105" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>Straight From Limbo</b>: R 89.90</label>
+						</div>
+						<div>
+							<img src="images/vacation.jpg" alt="Vacation" class="rounded">
+							<br>
+							<button class="btn-success" value="106" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>Vacation</b>: R70.00</label>
+						</div>
+					</article>
+					<article>
+						<div>
+							<img src="images/apollo_13.jpg" alt="Apollo 13" class="rounded">
+							<br>
+							<button class="btn-success" value="107" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>Apollo 13</b>: R 83.99</label>
+							<div class="popup">
+								<span class="popuptext" id="myPopup"></span>
+							</div>
+						</div>
+						<div>
+							<img src="images/pink_elephant.jpg" alt="Pink Elephant" class="rounded">
+							<br>
+							<button class="btn-success" value="108" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>Pink Elephant</b>: R97.00</label>
+							<div class="popup">
+								<span class="popuptext" id="myPopup"></span>
+							</div>
+						</div>
+						<div>
+							<img src="images/brain_dead.jpg" alt="Brain Dead" class="rounded">
+							<br>
+							<button class="btn-success" value="109" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>Brain Dead</b>: R 110.99</label>
+						</div>
+					</article>
+					<article>
+						<div>
+							<img src="images/theres_really_a_wolf.jpg" alt="There's Really A Wolf" class="rounded">
+							<br>
+							<button class="btn-success" value="110" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>There's Really A Wolf</b>: R 112.79</label>
+						</div>
+						<div>
+							<img src="images/the_edge.jpg" alt="The Edge" class="rounded" onclick="addToCart(this.value)">
+							<br>
+							<button class="btn-success" value="111" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>The Edge</b>: R 78.90</label>
+						</div>
+						<div>
+							<img src="images/5280.jpg" alt="5280" class="rounded">
+							<br>
+							<button class="btn-success" value="112" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							<br>
+							<label class="form-control-label"><b>5280</b>: R 89.99</label>
+						</div>
+					</article>
+				</div>
+			</div>
+			<!--Create another 6-grid in this container the house the cart itself in a form nad the coupon form for discounts-->
+			<div class="col-sm-6">
+				<div class="row">
+				<!--Create another grid within this 6-grid pane for the cart-->
+					<section class="col-sm-12">
+						<div id="productsHeader">
+							<h3 style="text-align: center; font-style: italic;">Cart</h3>
+						</div>
+						<!--The shopping cart is updated with elements by javascript when user add an item to cart-->
+						<div id="cart_form" class="overflow-auto">
+							<form id="cartProducts" class="accordion" onchange="accordionAnim()">
+							</form>
+						</div>
+						<div>
+							<label id="cartTotal" class="form-control-label"></label>
+						</div>
+						<div>
+							<button id="cartSubmit" class="btn btn-success" onclick="openDelivery()" disabled>Submit</button>
+							<!--The submit button opens a delivery form, in another html page-->
+							<button id="viewCart" class="btn btn-success" onclick="populateCart()">View cart</button>
+						</div>
+					</section>
+				</div>
+				<br>
+				<hr>
+				<br>
+				<div class="row">
+				<!--A full width grid within the 6-grid for the coupon form-->
+					<div class="col-sm-12">
+						<div id="productsHeader">
+							<h3 style="text-align: center; font-style: italic;">Coupon</h3>
+						</div>
+						<!--This coupon form is for computing discount on the Total price  cart or delivery-->
+						<form id="coupon" class="form-horizontal">
+							<label for="couponType" class="form-control-label">Type:</label>
+							<select id="couponType" class="form-control">
+								<option value="30 Off">30% Off</option>
+								<option value="Delivery Discount">Delivery Discount</option>
+							</select>
+							<br>
+							<label for="couponCode" class="form-control-label">Code:</label>
+							<input type="text" name="couponCode" id="couponCode" class="form-control">
+							<br>
+							<label for="couponDate" class="form-control-label">Coupon Date:</label>
+							<input type="text" name="couponDate" id="couponDate" class="form-control">
+							<br>
+							<div>
+								<button id="clearCoupon" class="btn btn-danger" onclick="clearCouponForm()">Clear</button>
+								<button id="submitCoupon" class="btn btn-success" onclick="couponEntry()">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br>
+	<hr>
+	<br>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">		<!--Large bootstrap container that occupies the bodies full width-->
+				<footer>
+					<p style="font-size: 21px;">&copy;Hyperion Development. Create and Designed by<a href="https://www.linkedin.com/in/monwabisi-dingane-4287028b/" target="_blank"><cite>Monza Dingane</cite></a>.&nbsp;&nbsp;Last update: <q>02 July 2019</q>.</p>		<!--The cite tag will display the text like a clickable link-->
+				</footer>
+			</div>
+		</div>
+		<br>
+	</div>
+	<div class="fixed">		<!--Create a fixed floating label-->
+		<label><a href="">@iammonza</a></label>
+	</div>
+</body>
+</html>

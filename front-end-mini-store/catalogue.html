@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Russ - Mini Store</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Primary styles to be accessed by the html page-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	<!--Secondary styles to be accessed by the html page-->
+	<link rel="stylesheet" type="text/css" href="styles/catalogue.css">
+
+	<!--Link to the external javascript file-->
+	<script type="text/javascript" defer src="scripts/cart.js"></script>
+
+	<!--Create a link to the jQuery library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+	<!--Bootstrap customised navigation bar found on its website-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  		<a class="navbar-brand" href="#">DIEMON Studios.</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		  <ul class="navbar-nav mr-auto">
+  		    <li class="nav-item">
+  		      <a class="nav-link" href="home.html">Home</a>
+  		    </li>
+  		    <li class="nav-item active">
+  		      <a class="nav-link" href="catalogue.html">Catalogue <span class="sr-only">(current)</span></a>
+  		    </li>
+  		    <li class="nav-item">
+  		      <a class="nav-link" href="cart.html">Cart</a>
+  		    </li>
+  		  </ul>
+  		</div>
+	</nav>
+	<header>
+		<div class="container">		<!--Create a bootstrap fluid container for placing the pages biggest header-->
+			<div class="row">
+				<div class="col-md-12">
+					<h1>The Russell 'Russ' Vitale Catalogue</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<div class="container">
+		<!-- Set the <img> class to img-thumbnail. In bootstrap, thumbnails are a way to creatively represent images, videos, text etc. Note that they work in conjucture with bootstrap's grid-system.-->
+		<div class="row">
+			<!--For every row in this page, group the screen in sections of 3 panels where you will have a h3 header, an image and a paragraph description per panel-->
+			<div class="col-sm">		<!--Create a division for every panel of small size using the bootstrap class col-md-->
+				<div id="how_to_rob">
+					<h5>How To Rob</h5>
+					<img src="images/how_to_rob.jpg" alt="How To Rob" class="img-thumbnail">		<!-- Set the <img> class to img-thumbnail to create a responsive image. This will alow the image to scale properly when viewed in different screen sizes.-->
+					<p>How To Rob is Russ' first mixtape after putting out 10 self-produced albums, and was released on August 18, 2014. Each song is named after an artist that has inspired Russ' music and has had large impacts in the hip-hop/rap industry overtime. <a href="https://genius.com/albums/Russ/How-to-rob" target="_blank">Read more...</a></p>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div id="zoo">
+					<h5>ZOO</h5>
+					<img src="images/zoo.jpg" alt="ZOO" class="img-thumbnail">
+					<p>Sixteen months after the release of There’s Really a Wolf, Russ' debut album, the 25-year-old rapper is coming back with ZOO. The album was announced on August 13, 2018. <a href="https://genius.com/albums/Russ/Zoo" target="_blank">Read more...</a></p>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div id="silence">
+					<h5>Silence</h5>
+					<img src="images/silence.jpg" alt="Silence" class="img-thumbnail">
+					<p>Russ is an American Hip-Hop artist that has made quite a name for himself especially in the past few years. He released the album Silence in June of 2014 under the label Diemon. <a href="https://www.amazon.com/Silence-Russ/dp/B00ODEZKGI" target="_blank">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm">
+				<div id="color_blind">
+					<h5>Color Blind</h5>
+					<img src="images/color_blind.jpg" alt="Color Blind" class="rounded">
+					<p>Russ has two different eye colors, a condition known as heterochromia; his left eye is dark-brown and his right is light-brown. <a href="https://genius.com/albums/Russ/Color-blind" target="_blank">Read more...</a></p>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div id="straight_from_limbo">
+					<h5>Straight From Limbo</h5>
+					<img src="images/straight_from_limbo.jpg" alt="Straight From Limbo" class="rounded">
+					<p>Straight from Limbo is a project by rising New Jersey Born Atlanta Raised Rapper/Emcee Russ. The project was released in 2013 and features 19 songs. Songs like the title track “Straight From Limbo” featuring Bugus are backed by incredible production and some mind blowing lyrics with a crazy flow and delivery. Along with songs like "C4" and "The One". <a href="https://genius.com/albums/Russ/Straight-from-limbo" target="_blank">Read more...</a></p>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div id="vacation">
+					<h5>Vacation</h5>
+					<img src="images/vacation.jpg" alt="Vacation" class="rounded">
+					<p>Atlanta's Diemon crew member Russ released this project earlier this week. Peep it below. Atlanta is really coming up with a new crop of emcees and I really like the direction that it is headed. <a href="https://genius.com/albums/Russ/Vacation" target="_blank"></a></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm">
+				<div id="apollo_13">
+					<h5>Apollo 13</h5>
+					<img src="images/apollo_13.jpg" alt="Apollo 13" class="img-thumbnail">
+					<p>The DIEMON producer & emcee Russ Vitale has released his new full-length album Apollo 13 today. The album has 8 original records with features from members of the infamous Diemon crew. The Diemon (Do It Everyday Music Or Nothin) crew is really putting in work in this album. <a href="https://genius.com/albums/Russ/Apollo-13" target="_blank"></a></p>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div id="pink_elephant">
+					<h5>Pink Elephant</h5>
+					<img src="images/pink_elephant.jpg" alt="Pink Elephant" class="img-thumbnail">
+					<p>The talented Russ is back after the release of his Pink Elephants EP with his album, Brain Dead. Pink Elephants was a great to the musicianship of Russ and it picked up fast. With reviews comparing Russ to Eminem it’s safe to say that Russ has a unique sound that really makes him stand out and Pink Elephantshowcases that sounds. <a href="https://genius.com/albums/Russ/Pink-elephant" target="_blank">Read more...</a></p>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div id="brain_dead">
+					<h5>Brain Dead</h5>
+					<img src="images/brain_dead.jpg" alt="Brain Dead" class="img-thumbnail">
+					<p>"Brain Dead" catches Russ at his best with clever stories, plot twists, and lyrics that provide plenty of imagery. Brain Dead is a great listen and is sure to make you a fan of Russ if you are not already. Tune in. <a href="https://genius.com/albums/Russ/Brain-dead" target="_blank">Read more...</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm">
+				<div id="theres_really_a_wolf">
+					<h5>There's Really A Wolf</h5>
+					<img src="images/theres_really_a_wolf.jpg" alt="There's Really A Wolf" class="rounded">
+					<p>There’s Really A Wolf is Russ' debut album after 10 years of hard work. The highly awaited album follows up his previous 11 projects and over 250 singles. As is his entire catalog, this album is strictly produced, mixed, mastered, and written by Russ himself. <a href="https://genius.com/albums/Russ/There-s-really-a-wolf" target="_blank">Read more..</a></p>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div id="the_edge">
+					<h5>The Edge</h5>
+					<img src="images/the_edge.jpg" alt="The Edge" class="rounded">
+					<p>One could only imagine my excitement when I saw that Russ had randomly released his latest effort, The Edge. We'd heard talk of the album when he released his music video for "Yung Pacino" last month, but we were never given a release date, and if we did I wasn't awre of it. When I saw his reasoning for having a plain black cover I became even more excited. Would he be able to top his last effort? Could this possibly be the flawless album I know he's capable of making? Unfortunately, no. <a href="https://www.amazon.com/Edge-Russ/dp/B00DOJPNIS" target="_blank">Read more...</a></p>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div id="5280">
+					<h5>5280</h5>
+					<img src="images/5280.jpg" alt="5280" class="rounded">
+					<p>This is Russ' fourth project in eight months and his third album released this year, which is a testament to the hungry up and coming artist's persistent drive and dedication to his craft. Made up of thirteen original records, on 5280 you can hear how Russ has progressed as both  a producer and emcee, especially as a producer when it comes to standout tracks like "Walk A Mile" & "Flashbacks." <a href="https://earmilk.com/2012/08/06/russ-5280-album/" target="_blank">Read more...</a></p>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<br>
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-md-6">
+				<!--Create a horizontal form using the bootstrap class form-horizontal-->
+				<h3 style="text-align: center;">Cant find what you're looking for? Message us.</h3>
+				<form class="form-horizontal">
+					<!--Since the form is styled with bootstrap, add a form-control class for input and textarea tags and a form-label for labels-->
+					<!--This will alowe bootstrap to properly resize the labels and input field accordingly--> 
+					<label for="fname" class="control-label">First Name:&nbsp;&nbsp;</label>
+					<input id="fname" type="text" class="form-control form-control-lg" name="firstname" required="required" placeholder="Your first name...">
+					<br>
+					<label for="lname" class="control-label">Last Name:&nbsp;&nbsp;</label>
+					<input id="lname" type="text" class="form-control form-control-lg" name="lastname" required="required" placeholder="Your last name...">
+					<br>
+					<label for="age" class="control-label">Are 18 years or older:&nbsp;&nbsp;</label>
+					<select id="age" name="age" class="form-control" required="required">		<!--Create a drop-down box with the select tag-->
+						<option value="">--Select Answer--</option>
+						<option value="yes">Yes</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+					<label for="albums" class="control-label">Albums:</label>
+					<!--A dropdown list with the album names as values-->
+					<select id="albums" name="albums" class="form-control" required="required">
+						<!--Every option tag is a value under the drop-down box with name="albums"-->
+						<option value="">--Select Album For Order--</option>
+						<option value="how_to_rob">HowTo Rob</option>
+						<option value="zoo">ZOO</option>
+						<option value="silence">Silence</option>
+						<option value="color_blind">Color Blind</option>
+						<option value="straight_from_limbo">Straight From Limbo</option>
+						<option value="vacation">Vacation</option>
+						<option value="apollo_13">Apollo 13</option>
+						<option value="pink_elephant">Pink Elephant</option>
+						<option value="brain_dead">Brain Dead</option>
+						<option value="theres_really_a_wolf">There's Really A Wolf</option>
+						<option value="the_edge">The Edge</option>
+						<option value="5280">5280</option>	
+					</select>
+					<br>
+					<label for="message" class="control-label">Message:&nbsp;&nbsp;</label>
+					<textarea id="message" rows="6" cols="36" class="form-control" placeholder="Additional message (Optional)"></textarea>
+					<br>
+					<button type="button" class="btn">Submit</button>		<!--Use bootstrap for this button by specifying the button class to btn so it can use bootstraps properties-->
+				</form>
+			</div>
+			<div class="col-md-6">
+				<h3 style="text-align: center; font-style: italic;">Catalogue Prices.</h3>
+				<!--Create a table using bootstrap by specifying the class as table. This table lists the album prices and buttons to add album to cart.-->
+				<table align="center" class="table table-sm table-bordered table-striped">
+					<thead class="thead-dark">
+						<tr>
+						<th>Album</th>
+						<th>Released</th>
+						<th>Price</th>
+						<th>Cart</th>
+					</tr>
+					</thead>
+					
+					<tr>
+						<td>How To Rob</td>
+						<td>August 18, 2014</td>
+						<td>R 120.00</td>
+						<td>
+							<button class="btn-success" value="101" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Zoo</td>
+						<td>September 2, 2018</td>
+						<td>R 133.49</td>
+						<td>
+							<button class="btn-success" value="102" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Silence</td>
+						<td>June 11, 2014</td>
+						<td>R 99.99</td>
+						<td>
+							<button class="btn-success" value="103" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Color Blind</td>
+						<td>September 2, 2013</td>
+						<td>R 77.24</td>
+						<td>
+							<button class="btn-success" value="104" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Straight From Limbo</td>
+						<td>January 1, 2013</td>
+						<td>R 89.90</td>
+						<td>
+							<button class="btn-success" value="105" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Vacation</td>
+						<td>September 24, 2012</td>
+						<td>R 70.00</td>
+						<td>
+							<button class="btn-success" value="106" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Apollo 13</td>
+						<td>January 24, 2012</td>
+						<td>R 83.99</td>
+						<td>
+							<button class="btn-success" value="107" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Pink Elephant</td>
+						<td>January 23, 2014</td>
+						<td>R 97.00</td>
+						<td>
+							<button class="btn-success" value="108" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Brain Dead</td>
+						<td>March 24, 2014</td>
+						<td>R 110.99</td>
+						<td>
+							<button class="btn-success" value="109" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>There's Really A Wolf</td>
+						<td>May 5, 2017</td>
+						<td>R 112.79</td>
+						<td>
+							<button class="btn-success" value="110" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>The Edge</td>
+						<td>June 12, 2013</td>
+						<td>R 78.90</td>
+						<td>
+							<button class="btn-success" value="111" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+					<tr>
+						<td>5280</td>
+						<td>July 23, 2012</td>
+						<td>R 89.99</td>
+						<td>
+							<button class="btn-success" value="112" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">		<!--Large bootstrap container that occupies the bodies full width-->
+				<footer>
+					<p style="font-size: 21px;">&copy;Hyperion Development. Create and Designed by<a href="https://www.linkedin.com/in/monwabisi-dingane-4287028b/" target="_blank"><cite>Monza Dingane</cite></a>.&nbsp;&nbsp;Last update: <q>02 July 2019</q>.</p>		<!--The cite tag will display the text like a clickable link-->
+				</footer>
+			</div>
+		</div>
+		<br>
+	</div>
+	<div class="fixed">		<!--Create a fixed floating label-->
+		<label><a href="">@iammonza</a></label>
+	</div>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Russ - Mini Store</title>
+
+	<!-- Bootstrap's CDN primary styles to be accessed by the html page-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	<!--Link to an external stylesheet for this page-->
+	<link rel="stylesheet" type="text/css" href="styles/home.css">
+
+	<!--Link to the external javascript file-->
+	<script type="text/javascript" defer src="scripts/cart.js"></script>
+
+	<!--Link to the external javascript file-->
+	<script type="text/javascript" defer src="scripts/storeEffects.js"></script>
+
+	<!--Create a link to the jQuery library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+ <!--Clear cart and local storages when the browser opens on home-->
+<body>
+	<!--Bootstrap custom styled navigation bar-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  		<a class="navbar-brand" href="#">DIEMON Studios.</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		  <ul class="navbar-nav mr-auto">
+  		    <li class="nav-item active">
+  		      <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+  		    </li>
+  		    <li class="nav-iteme">
+  		      <a class="nav-link" href="catalogue.html">Catalogue</a>
+  		    </li>
+  		    <li class="nav-item">
+  		      <a class="nav-link" href="cart.html">Cart</a>
+  		    </li>
+  		  </ul>
+  		</div>
+	</nav>
+	<header>
+		<!--Create a bootstrap container for placing the pages biggest header-->
+		<div class="container">		
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Russ - Online Store</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+	<hr>
+	<!--The home pages main pictures on a bootstrap contain-->
+	<section id="mainImagesSec" class="container">
+		<div class="row">
+			<article id="mainImagesArt" class="col-sm-6" onmouseover="fadingOut()" onmouseout="fadingIn()">
+				<img id="mainImage" src="images/clearance_sale.jpg" alt="Clearance Sale Banner" class="img-thumbnail">
+			</article>
+			<article id="mainImagesArt" class="col-sm-6" onmouseover="fadingOut()" onmouseout="fadingIn()">
+				<img id="mainImage" src="images/russ_rapper.jpg" alt="Russell Vitale" class="img-thumbnail">
+			</article>
+		</div>
+	</section>
+	<br>
+	<hr>
+	<br>
+	<section class="container">
+		<div class="row">
+			<!--Bootstrap 4-grid in a container. This contains article elements that display some of the available albums in the store with buttons to add to cart-->
+			<div class="col-sm-4">
+				<h3 style="text-align: center;"><i>Buy Album:</i></h3>
+				<!--Each add to cart button has a value thats the same as the product id in the products object from the cart.js javascript file-->
+				<article id="buyAlbums" >
+					<img id="album" src="images/apollo_13.jpg" alt="Apollo 13" class="rounded">
+					<br>
+					<label for="apollo_13" class="form-control">Apollo 13 Album</label>
+					<button class="btn-success" value="107" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+				</article>
+				<br>
+				<br>
+				<article id="buyAlbums">
+					<img id="album" src="images/how_to_rob.jpg" alt="How To Rob" class="rounded">
+					<br>
+					<label for="how_to_rob" class="form-control">How To Rob Album</label>
+					<button class="btn-success" value="101" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+				</article>
+				<br>
+				<article id="buyAlbums">
+					<img id="album" src="images/brain_dead.jpg" alt="Brain Dead" class="rounded">
+					<br>
+					<label for="brain_dead" class="form-control">Brain Dead Album</label>
+					<button class="btn-success" value="109" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+				</article>
+				<br>
+				<article id="buyAlbums">
+					<img id="album" src="images/5280.jpg" alt="5280" class="rounded">
+					<br>
+					<label for="5280" class="form-control">5280</label>
+					<button class="btn-success" value="112" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+				</article>
+				<br>
+				<article id="buyAlbums">
+					<img id="album" src="images/the_edge.jpg" alt="The Edge" class="rounded">
+					<br>
+					<label for="the_edge" class="form-control">The Edge Album</label>
+					<button class="btn-success" value="111" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+				</article>
+				<br>
+			</div>
+			<div class="col-sm-8">
+				<h3><i>Listen:</i></h3>
+				<!--Bootstrap customized table that contains single songs available in the store-->
+				<table id="listenTracks" class="table table-lg table-bordered">
+					<thead class="thead-dark">
+						<th>Title</th>
+						<th>Audio</th>
+						<th>Price</th>
+						<th>Cart</th>
+					</thead>
+					<tbody>
+						<tr>
+							<!--Use audio element to include aduio files in the html page. Buttons also have values associated with audio file by id. Source element specifies where html can find the file-->
+							<td>
+								<h6>Aint Nobody Takin My Baby</h6>
+							</td>
+							<td>
+
+								<audio controls="controls">
+									<source src="audio/Aint_Nobody_Takin_My_Baby_Lyrics.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 21.00</label>
+							</td>
+							<td style="justify-content: center;">
+								<button class="btn-success" value="113" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>Basement</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/Basement_ft_Jessie_Reyez.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 18.70</label>
+							</td>
+							<td>
+								<button class="btn-success" value="114" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>Civil War</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/Civil_War.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 23.70</label>
+							</td>
+							<td>
+								<button class="btn-success" value="125" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>Flip</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/Flip.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 21.79</label>
+							</td>
+							<td>
+								<button class="btn-success" value="115" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						<tr>
+							<td>
+								<h6>InBetween</h6>
+							</td>
+							<td>
+								<audio controls="">
+									<source src="audio/Inbetween.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 18.78</label>
+							</td>
+							<td>
+								<button class="btn-success" value="116" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>Some Time</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/Some_Time.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 11.20</label>
+							</td>
+							<td>
+								<button class="btn-success" value="117" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>Someone To Drink With</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/Someone_To_Drink_With.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 13.45</label>
+							</td>
+							<td>
+								<button class="btn-success" value="118" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>The Journey</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/The_Journey.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 12.49</label>
+							</td>
+							<td>
+								<button class="btn-success" value="119" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>Too Many</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/Too_Many.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 16.00</label>
+							</td>
+							<td>
+								<button class="btn-success" value="120" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>Waste My Time</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/Waste_My_Time.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 17.79</label>
+							</td>
+							<td>
+								<button class="btn-success" value="121" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>We Just Haven't Met Yet</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/We_Just_Havent_Met_Yet.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 18.99</label>
+							</td>
+							<td>
+								<button class="btn-success" value="122" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>Wife You Up</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/Wife_You_Up.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 15.90</label>
+							</td>
+							<td>
+								<button class="btn-success" value="123" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>Willy Wonka</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/Willy_Wonka_.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 17.43</label>
+							</td>
+							<td>
+								<button class="btn-success" value="126" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>Yung God</h6>
+							</td>
+							<td>
+								<audio controls="controls">
+									<source src="audio/Yung_God.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+							<td>
+								<label class="form-control">R 14.29</label>
+							</td>
+							<td>
+								<button class="btn-success" value="124" onclick="addToCart(this.value)"><b>+</b> add to cart</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+	<br>
+	<hr>
+	<br>
+	<section class="container">
+		<div class="row">
+			<div class="col-12">		<!--Large bootstrap container that occupies the bodies full width-->
+				<footer style="display: flex; justify-content: center;">
+					<p style="font-size: 21px;">&copy;Hyperion Development. Create and Designed by <cite>Monza Dingane</cite>.&nbsp;&nbsp;Last update: <q>02 July 2019</q>.</p>		<!--The cite tag will display the text like a clickable link-->
+				</footer>
+			</div>
+		</div>
+	</section>
+	<div class="fixed">		<!--Create a fixed floating label-->
+		<label><a href="">@iammonza</a></label>
+	</div>
+</body>
+</html>

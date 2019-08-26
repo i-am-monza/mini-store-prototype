@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Russ - Mini Store</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Primary styles to be accessed by the html page-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	<!--Secondary styles to be accessed by the html page-->
+	<link rel="stylesheet" type="text/css" href="styles/delivery.css">
+
+	<!--Link to the javascript file specifically for this html page-->
+	<script type="text/javascript" defer src="scripts/delivery.js"></script>
+
+	<!--Link to the javascript file that has general purpose function descriptions-->
+	<script type="text/javascript" defer src="scripts/ministore.js"></script>
+
+	<!--Create a link to the jQuery library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body onload="cartProducts()">
+	<!--Create a bootstrap customized popup form for entering delivery details-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<!--All input fiels in the delivery form are required fileds for authenticity-->
+				<form class="form-container form-horizontal">
+					<h3 style="text-align: center; font-style: italic;">Delivery</h3>
+					<br>
+					<!--This custom-control radiob button enables the disabled div form with id='deliveryEntry'-->
+					<div class="radio">
+					  <label><input id="collection" type="radio" name="optradio" value="collection" checked onchange="disableForm()">Collection</label>
+					</div>
+					<div class="radio">
+					  <label><input id="delivery" type="radio" name="optradio" value="delivery" onchange="enableForm()">Delivery</label>
+					</div>
+					<fieldset id="deliveryEntry" class="form-horizontal" disabled>
+						<label for="fname" class="form-control-label">First name:</label>
+						<input type="text" name="fname" id="fname" required="required" class="form-control">
+						<br>
+						<label for="lname" class="form-control-label">Last name</label>
+						<input type="text" name="lname" id="lname" required="required" class="form-control">
+						<br>
+						<label for="address" class="form-control-label">Address:</label>
+						<input type="text" name="address" id="address" required="required" class="form-control">
+						<br>
+						<label for="zip" class="form-control-label">Zip code:</label>
+						<input type="text" name="zip" id="zip" required="required" class="form-control">
+						<br>
+						<label for="deliveryOption" class="form-control-label"></label>
+						<select id="deliveryOption" class="form-control">
+							<option id="standardDelivery" selected="selected" value="1.65">Standard</option>
+							<option id="expressDelivery" value="2.65">Express</option>
+						</select>
+						<br>
+					</fieldset>
+					<div style="float: left;">
+						<label id="totalCheckout"></label>
+					</div>
+					<div style="float: right;">
+						<!--Cancel button closes the delivery form-->
+						<button id="cancelDelivery" type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+						<!--Sybmit button for submitting order-->
+						<button id="checkoutDelivery" type="submit" class="btn-success" onclick="submitOrder()">Check Out</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
